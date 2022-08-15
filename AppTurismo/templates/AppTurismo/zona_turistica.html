@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Lugar1</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+        <meta property="og:title" content="">
+        <meta property="og:image" content="">
+        <meta property="og:url" content="">
+        <meta property="og:site_name" content="">
+        <meta property="og:description" content="">
+
+        <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="">
+        <meta name="twitter:title" content="">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="">
+
+        <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+        <link href="favicon.ico" rel="shortcut icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+        <!-- Bootstrap CSS File -->
+        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Libraries CSS Files -->
+        <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="lib/animate-css/animate.min.css" rel="stylesheet">
+
+        <!-- Main Stylesheet File -->
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header id="header">
+            <div class="container">
+              <div id="logo" class="pull-left">
+                <h1><a href="#Lugar1">Lugar 1 </a></h1>
+              </div>
+              
+              <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                  <li><a href="index.html">Inicio</a></li>
+                  <li><a href="#services">Zonas Turisticas</a></li>
+                  <li><a href="crear.html">Crear Zonas Turisticas</a></li>
+                  <li><a href="#portfolio">Mi Perfil</a></li>
+                  <li><a href="#contact">Cerrar</a></li>
+                </ul>
+              </nav>
+
+            </div>
+        </header>
+        <section id="event">
+            <div class="bg-color" class="section-padding">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-12 text-center" style="padding:60px;">
+                    <h1 class="header-h">Lugar turistico 1</h1>
+                    <p class="header-p">Introduccion</p>
+                  </div>
+                  <div class="col-md-12" style="padding-bottom:60px;">
+                    <div class="item active left">
+                      <div class="col-md-6 col-sm-6 left-images">
+                        <img src="img/8.jpg" class="img-responsive">
+                      </div>
+                      <div class="col-md-6 col-sm-6 details-text">
+                        <div class="content-holder">
+                          <h2>El lugar es conocido por</h2>
+                          <div class="scrolldiv">
+                            <p>Descripcion 1 del lugar 1 del momento 1 de esa cosa</p>
+                          </div>
+                          <address>
+                                      <strong>Lugar: </strong>
+                                      Direccion
+                                      <br>
+                            </address>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <footer>
+            <div class="verybottom">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="aligncenter">
+                      <ul class="social-network social-circle">
+                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="aligncenter">
+                      <p class="end">
+                        Gracias por visitarnos 
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+    </body>
+</html>
+
+
+{% for instance in object_list %}
+      <section id="event">
+        <div class="bg-color" class="section-padding">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 text-center" style="padding:60px;">
+                <h1 class="header-h">{{ instance.nombre }}</h1>
+                <p class="header-p">Horario: {{instance.horario }}</p>
+              </div>
+              <div class="col-md-12" style="padding-bottom:60px;">
+                <div class="item active left">
+                  <div class="col-md-6 col-sm-6 left-images">
+                    <img src="img/8.jpg" class="img-responsive">
+                  </div>
+                  <div class="col-md-6 col-sm-6 details-text">
+                    <div class="content-holder">
+                      <h2>Descripcion del lugar:</h2>
+                      <div class="scrolldiv">
+                        <p>{{ instance.descripcion }}</p>
+                      </div>
+                      <address>
+                                  <strong>Distrito: </strong>
+                                  {{ instance.distrito }}
+                                  <br>
+                        </address>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn-info" href="{{instance.get_absolute_url}}">
+                Ver Detalles</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+{% endfor %}

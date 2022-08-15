@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action='.' method="POST">
+    {% csrf_token %}
+    <h2>Desea borrar este sitio: {{ objeto.nombre }}</h2>
+    <input type="submit" value="Si"/>
+    <a href="../">Cancelar</a>
+</form>
+{% endblock %}

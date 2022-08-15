@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <style>
+        body {
+            font-family: "Open Sans", sans-serif;
+            height: 100vh;
+            background-size: cover;
+        }    
+    </style>
+</head>
+<body background= "../../../media/pics/1280px-Catedral_Arequipa_Peru.jpg">
+    <section class="contactos pt-3" id="contacto">
+        <div class="gallery" style="background-color:powderblue; opacity: .9;">
+            <div class="row contact justify-content-center">
+                <div class="col-6">
+                    <div class="mb-5 text-center">
+                        <h2 class="mb-5 text-colr">Bienvenido de nuevo, inicia sesión</h2>
+                        <p class="text-colr">Si ya tienes una cuenta accede con tu usuario y contraseña, recuerda que al tener una cuenta puedes personalizar tu perfil de usuario.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row  justify-content-center">
+                <div class="col-sm-6 col-md-8">
+                    <form action="." method="POST">
+                        {% csrf_token %}
+                        <div class="form-group ">
+                            <input type="text" name="username" class="form-control"  placeholder="Usuario" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="Contraseña" required="">
+                        </div>     
+                        <div >
+                            <input type="submit"> 
+                        </div>         
+                    </form>                   
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12-auto  mt-3 mb-3">
+                  <button class="btn mr-3"><a class= "" href="../">Cancelar</a></button>
+                </div>
+            </div>
+                
+            {% for message in messages %}
+            <div class="row justify-content-center ">
+                <div class="col-12-auto  mt-3 mb-3 bg-dark">
+                    <strong> <h4 class="text-white pt-2 pb-2 pr-2 pl-2"> {{ message }} </h4></strong>
+                </div>       
+            </div>
+            {% endfor %}          
+        </div>
+      </section>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    .btn-4{
+    text-decoration: none;
+    padding: 5px;
+    font-family: helvetica;
+    font-weight: 300;
+    font-size: 25px;
+    font-style: italic;
+    color: #f5f1f1;
+    background-color: #050505;
+    border-radius: 10px;
+    border:none;
+  }
+  .boton_1:hover{
+    opacity: 0.6;
+    text-decoration: none;
+  }
+</style>
+<section class="contactos pt-3">
+    <div class="container">
+        <div class="row  justify-content-center">
+            <div class="card ">
+              <div class="card-header bg-success text-center text-light ">
+                 <h2>Registrar Nuevo Usuario</h2>
+              </div>
+              <div class="card-body">
+                <form  method="POST" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+              </div>
+              <div class="card-footer text-muted">
+                <input type="submit" value="Enviar" class="btn btn-primary">
+                <a class= "btn btn-danger"tn href="../">Cancelar</a>
+              </div>  
+            </form>              
+            </div>
+        </div>
+    </div>
+  </section>
+
+{% endblock %}
+{% include "footer.html" %}

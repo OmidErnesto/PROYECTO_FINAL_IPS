@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Perfil</title>
+        <link rel="stylesheet" href="/../media/lib/bootstrap/css/perfil.css">
+    </head>
+    <body>
+        <div class="inicio">
+            <img class="logo"src="../media/img/logo.png" alt="">
+            <div>
+            <a class="opciones" href="/zonaturismo/">Zonas turisticas</a>
+            <a class="opciones" href="../">Inicio</a>
+        </div>
+        </div>
+        <div class="portada" ><img  class="portadas" src="../media/img/7.jpg" alt=""></div>
+        <div class="lugares"></div>
+        <div class="novedades">
+            <div class="parte1">
+                <a href="">Novedades 1 </a><br>
+                <a> Comparte los ultimos lugares que visitaste</a>
+            </div>
+            <div class="parte2">
+                <a href="">Novedades 2</a><br>
+                <a> Comparte los ultimos lugares que visitaste</a>
+            </div>
+            <div class="parte3">
+                <a href="">Novedades 3</a><br>
+                <a> Comparte los ultimos lugares que visitaste</a>
+            </div>
+        </div>
+        <div class="personal">
+            <div class="foto"><img class="fotos" src="{{ user.get_image }}" alt=""></div>
+            <div class=caracteristicas>
+                <h3>Nombre: {{ user.get_full_name }}</h3>
+                <p><b>Se unió el: </b>{{ user.date_joined }} </p>
+                <p><b>Ultima conexión: </b>{{ user.last_login }} </p>
+            </div>
+        </div>
+        <div class="lugares">
+            <div class="lugar">
+                <h2>Descripcion</h2>
+                <div class="deslugar">
+                    <p><b>Cuentanos sobre ti.</b></p>
+                </div>
+                <img class="imagenlug"src="{{ user.get_image }}" alt="">
+                <div class="calificacion">
+
+                </div>
+            </div>
+            <div class="lugar">
+                <h2>Titulo 2 </h2>
+                <div class="deslugar">
+                    <p><b>Describe los lugares que visitaste</b></p>
+                </div>
+                <img class="imagenlug" src="../media/img/13.jpg" alt="">
+                <div class="calificacion">
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

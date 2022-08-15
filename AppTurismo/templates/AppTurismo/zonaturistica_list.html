@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% block content %}
+
+<section class="pt-3">
+  <div class="container pb-5">
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <h3>Lugares Disponibles</h3>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      {% for instance in object_list %}
+      <section id="event">
+        <div class="bg-color" class="section-padding">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 text-center" style="padding:60px;">
+                <h1 class="header-h"><b>{{ instance.nombre }}</b></h1>
+              </div>
+              <div class="col-md-12" style="padding-bottom:60px;">
+                <div class="item active left">
+                  <div class="col-md-6 col-sm-6 left-images">
+                    <img src="../../../media/{{ instance.img}}" class="img-responsive">
+                  </div>
+                  <div class="col-md-6 col-sm-6 details-text">
+                    <div class="content-holder">
+                      <h2><b>Descripcion del lugar:</b></h2>
+                      <div class="scrolldiv">
+                        <p>{{ instance.descripcion }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn-info" href="{{instance.get_absolute_url}}">
+                Ver Detalles</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% if request.user.is_superuser %}
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="col-6-auto boton-envio mt-3 mb-3">
+          <a href="agregar" class="btn-size btn btn-info">Agregar pelicula</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %} {% endblock %}

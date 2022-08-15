@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Zonas turisticas</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="favicon.ico" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="/../media/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="/../media/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/../media/lib/animate-css/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="/../media/css/style.css" rel="stylesheet">
+  <link href="/../media/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/../media/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/../media/css/animate.css">
+  <link href="/../media/css/animate.min.css" rel="stylesheet">
+  <link href="/../media/css/style.css" rel="stylesheet" />
+
+</head>
+    <body>
+        <div id="preloader"></div>
+        <section id="hero">
+          <div class="hero-container">
+            <div class="wow fadeIn">
+              <div class="hero-logo">
+                <img class="" src="/../media/img/logo.png" alt="ProOnliPc">
+              </div>
+      
+              <h1>Bienvenido a arequipa</h1>
+              <h2>La ciudad blanca es <span class="rotating">hermosa,pacifica,maravillosa</span></h2>
+            </div>
+          </div>
+        </section>
+
+        <header id="header">
+            <div class="container">
+              <div id="logo" class="pull-left">
+                <a href="#hero"><img src="/../media/img/logo.png" alt="" title="" /></img></a>
+              </div>
+              <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                  <li><a href="http://127.0.0.1:8000/">Inicio</a></li>
+                  <li><a href="/zonaturismo/">Zonas Turisticas</a></li>
+                  {% if user.is_authenticated %}
+                  <li><a>Bienvenido, {{ user.first_name }}</a></li>
+                  <li><a href="/usuario/">Mi Perfil</a></li>
+                  <li><a href="../logout">Cerrar Sesion</a></li>
+                  {% else %}
+
+                  <li><a href="http://127.0.0.1:8000/login">Iniciar Sesión</a></li>
+                  <li><a href="http://127.0.0.1:8000/registro/">Crear Cuenta</a></li>
+                  {% endif %}
+                </ul>
+              </nav>
+
+            </div>
+        </header>
+        <div class="gallery">
+           {% block content %}
+           {% include 'detalleZona.html' %}
+            {% endblock %}
+
+            <footer>
+                <div class="verybottom">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="aligncenter">
+                          <ul class="social-network social-circle">
+                            <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                            <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="aligncenter">
+                          <p class="end">
+                            Gracias por visitarnos 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+        
+        <script src="../media/js/jquery.js"></script>
+        <script src="../media/js/bootstrap.min.js"></script>
+        <script src="../media/js/wow.min.js"></script>
+        <script>
+            wow = new WOW({}).init();
+        </script>
+        <script src="../media/lib/jquery/jquery.min.js"></script>
+        <script src="../media/lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../media/lib/superfish/hoverIntent.js"></script>
+        <script src="../media/lib/superfish/superfish.min.js"></script>
+        <script src="../media/lib/morphext/morphext.min.js"></script>
+        <script src="../media/lib/wow/wow.min.js"></script>
+        <script src="../media/lib/stickyjs/sticky.js"></script>
+        <script src="../media/lib/easing/easing.js"></script>
+        <script src="../media/js/custom.js"></script>
+        <script src="../media/contactform/contactform.js"></script>
+    </body>
+</html>

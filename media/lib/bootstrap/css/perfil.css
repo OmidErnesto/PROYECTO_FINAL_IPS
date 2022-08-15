@@ -1,0 +1,132 @@
+body{
+    margin: 0%;
+    background-image: url(../img/fondo-galeria.jpg);
+}
+.novedades{
+    background-color: rgba(0, 0, 0, 0.705);
+    width: 281px;
+    height: 650px;
+    position: fixed;
+    float: right;
+    margin: 0%;
+    margin-top: 56px;
+    margin-left: 1085px;
+}
+.parte1,.parte2,.parte3{
+    width: 250px; ;
+    height: 188px;
+    margin:5px;
+    padding: 10px;
+    background-color: rgba(167, 114, 0, 0.49);
+    overflow-y: scroll;
+    overflow-y: auto;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    size: 12px;
+}
+.inicio{
+    border:  solid rgba(0, 0, 0, 0.65);
+    margin:0px;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(0, 0, 0);
+    float: left;
+    position:fixed;
+}
+.portada{
+    margin:0px;
+    width: 1084px;
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.268);
+    float: left;
+}
+.portadas{
+    max-width: 100%;
+    max-height: 100%;
+    float: right;
+}
+.personal{
+    background-color: rgba(255, 255, 255, 0.344);
+    width: 300px;
+    height: 510px;
+    position: fixed;
+    margin-top: 120px;
+}
+.foto{    
+    margin: 5px;
+    width: 290px;
+    height: 290px;
+}
+.fotos{
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 200px;
+    width: 290px;
+    height: auto;
+}
+.caracteristicas{
+    padding: 9px;
+    background-color: rgba(186, 109, 22, 0.63);
+    width: 270px;
+    margin: 5px;
+    height: 170px;
+    overflow-y: scroll;
+    overflow-y: auto;
+}
+.lugares{
+    width: 765px;
+    height: 330px;
+    background-color: rgba(0, 0, 0, 0.489);
+    margin-top:360px ;
+    margin-left: 310px;
+    position: fixed;
+    overflow-y: scroll;
+    overflow-y: auto;
+}
+h1{
+    text-align: center;
+    margin: 0%;
+}
+h2{
+    color:white;
+    padding: 5px;
+    background-color: rgba(224, 164, 23, 0.338);
+    margin: 0%;
+}
+.lugar{
+    background-color: rgba(228, 161, 6, 0.078);
+    margin: 10px;
+    width: 730px;
+    height: 280px;
+}
+.deslugar{
+    margin: 10px;
+    background-color: rgba(224, 164, 23, 0.338);
+    width: 450px;
+    height: 220px;
+    float: left;
+}
+.imagenlug{
+    margin: 5px;
+    margin-right: 15px;
+    margin-top: 10px;
+    width: 230px;
+    height: auto;
+    float: right;
+    border-radius: 100%;
+}
+.logo{
+    float:left;
+    height: 40px;
+    width: auto;
+}
+.opciones{
+    color: rgb(255, 255, 255);
+    float: right;
+    background-color: rgba(255, 187, 0, 0.318);
+    size: 30px;
+    padding: 15px;
+    margin: 5px;
+}
